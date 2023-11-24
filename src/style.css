@@ -1,0 +1,420 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* .header part css */
+
+.header{
+    background-color: rgba(5, 5, 6, 0.3);
+    width: 100%;
+    height: 60px;
+    padding: 0px 30px;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 1111;
+    animation: header 1s;
+    box-shadow: 2px 0px 5px rgb(255, 255, 255);
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+.header input{
+    display: none;
+}
+.header label{
+    cursor: pointer;
+}
+.logo{
+    float: left;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left: 25px;
+    color: rgb(71, 71, 71);
+    animation: logo 1.5s infinite;
+}
+@keyframes logo{
+    50%{
+        color: rgb(255, 255, 255);
+        text-decoration-line: overline;
+        font-size: 35px;
+        margin-left: -10px;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px rgb(255, 255, 255),
+                    -1px -1px 5px rgb(255, 255, 255); 
+    }
+}
+.header label:hover, #logo:checked ~ label{
+    color: rgb(255, 255, 255);
+    text-decoration-line: overline;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255),
+                -1px -1px 5px rgb(255, 255, 255);
+}
+.nav{
+    float: right;
+    font-size: 20px;
+}
+.nav li{
+    list-style: none;
+    display: inline-flex;
+    margin: 20px 0px;
+}
+.nav li a{
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+}
+.nav li a:hover{
+    color: rgb(220, 20, 60);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.nav li a:active{
+    color: rgb(39, 2, 64);
+}
+.checkbtn{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    float: right;
+    display: none;
+    line-height: 65px;
+}
+
+/* body part css -> home */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hcontent{
+    z-index: 1;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: 600;
+}
+.hcontent a{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: rgba(3, 72, 18,0.7);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.hcontent a:hover{
+    background-color: rgba(38, 38, 231, 0.7);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+}
+.video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+.bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    z-index: -2;
+}
+
+/* body part css -> about */
+
+.about{
+    background-image: url(Images/bg.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 65px;
+    color: rgb(255, 255, 255);
+}
+.about h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+.pro{
+    font-size: 20px;
+    float: right;
+    margin: 20px 10%;
+    width: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 0px 5px rgb(255, 255, 255),
+                0px 5px 5px rgb(255, 255, 255),
+                -5px 0px 5px rgb(255, 255, 255),
+                0px -5px 5px rgb(255, 255, 255);
+}
+.pro2{
+    float: left;
+}
+
+/* body part css -> Menu */
+
+.menu{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    border: 5px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(39, 39, 39);
+}
+.smenu{
+    width: 45%;
+    height: 45%;
+    margin: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.tospl{
+    float: right;
+    box-shadow: 15px 15px 15px rgb(255, 255, 255);
+    background-image: url(Images/sbg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.veg{
+    float: left;
+    box-shadow: -15px 15px 15px rgb(255, 255, 255);
+    background-image: url(Images/sbg3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.non-veg{
+    float: left;
+    box-shadow: 15px -15px 15px rgb(255, 255, 255);
+    background-image: url(Images/sbg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.des{
+    float: right;
+    box-shadow: -15px -15px 15px rgb(255, 255, 255);
+    background-image: url(Images/sbg4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.menu p{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    font-size: 35px;
+    font-weight: 600;
+    background-color: rgba(221, 160, 221,0.4);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.menu p:hover{
+    opacity: 0;
+}
+
+/* body part css -> Reservation */
+
+.reserve{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    background-image: url(Images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.reserve h1{
+    line-height: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.resForm{
+    padding: 10px;
+    margin: 5% 30%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+.resForm label{
+    padding: 10px;
+}
+.resForm input, button{
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    width: 200px;
+}
+.resForm a{
+    color: rgb(0, 0, 0);
+}
+.tc, #tc{
+    font-size: 20px;
+    margin-left: -10%;
+}
+.button{
+    font-size: 20px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: rgba(4, 250, 78, 0.5);
+}
+.button:hover{
+    background-color: rgba(224, 75, 75, 0.5);
+    color: rgb(255, 255, 255);
+}
+.canply{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 0px 15%;
+}
+.canply span{
+    font-weight: bold;
+}
+
+/* footer part css */
+
+.footer{
+    line-height: 40px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    box-shadow: -2px 0px 5px rgb(255, 255, 255);
+    z-index: 1111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a, .footer p{
+    padding: 0px 5px;
+    color: rgb(255, 255, 255);
+}
+.footer a:hover{
+    color: rgb(43, 231, 90);
+}
+.footer a:active{
+    color: rgb(210, 27, 27);
+}
+
+
+@media screen and (max-width: 1120px){
+    .checkbtn{
+        display: block;
+    }
+    .nav{
+        width: 100%;
+        height: 60vh;
+        background-color: rgba(83, 102, 77, 0.9);
+        top: 65px;
+        position: absolute;
+        right: -100%;
+        text-align: center;
+        transition: 0.5s;
+        font-size: 20px;
+    }
+    .nav li{
+        display: block;
+        margin: 35px 0px;
+        line-height: 20px;
+    }
+    #check:checked ~ .nav{
+        right: 0px;
+    }
+    .video{
+        height: 100vh;
+    }
+    .about{
+        height: 140vh;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    .reserve h1{
+        font-size: 40px;
+    }
+    .resForm{
+        font-size: 25px;
+        margin: 5% 20%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header{
+        padding: 0px 25px;
+    }
+    .hcontent{
+        font-size: 30px;
+    }
+    .btn{
+        font-size: 17px;
+    }
+    .about{
+        height: 170vh;
+    }
+    .menu p{
+        font-size: 25px;
+    }
+    .reserve h1{
+        font-size: 30px;
+    }
+    .resForm{
+        font-size: 20px;
+        margin: 10% 10%;
+    }
+    .tc{
+        margin-left: -20%;
+    }
+}
+
+/* For Mobile view */
+
+@media screen and (max-width: 420px) {
+    .about{
+        height: 150vh;
+    }
+    .pro{
+        font-size: 15px;
+    }
+    .reserve h1{
+        font-size: 25px;
+    }
+    .resForm{
+        margin: 2% 10%;
+    }    
+    .tc, #tc{
+        font-size: 15px;
+        margin-left: -40%;
+    }
+    .canply{
+        font-size: 15px;
+    }
+    .footer{
+        font-size: 15px;
+    }
+}
